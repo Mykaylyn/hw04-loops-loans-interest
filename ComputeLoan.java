@@ -18,19 +18,24 @@ public class ComputeLoan {
   //initialize Scanner
   Scanner.scan = new Scanner(System.in);
 
-  //ask user for loan amount
-  System.out.println("Enter Loan Amount: ");
+  /*
+  This method gathers user input and stores them in variables
+  */
+  public void userInput() {
+    //ask user for loan amount
+    System.out.println("Enter Loan Amount: ");
 
-  //loan amount user input
-  int loanAmt;
-  loanAmt = scan.nextInt();
+    //loan amount user input
+    int loanAmt;
+    loanAmt = scan.nextInt();
 
-  //ask user for loan period
-  System.out.println("Enter Loan Period: ");
+    //ask user for loan period
+    System.out.println("Enter Loan Period: ");
 
-  //loan period user input
-  int loanPeriod;
-  loanPeriod = scan.nextInt();
+    //loan period user input
+    int loanPeriod;
+    loanPeriod = scan.nextInt();
+  }
 
 
   /*Computing Methods*/
@@ -39,6 +44,8 @@ public class ComputeLoan {
   /*
   Main method
   */
-
+  public static void main(String[] args) {
+    userInput();
+  }
 
 }
