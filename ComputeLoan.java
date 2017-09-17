@@ -15,6 +15,12 @@ Compute Loan class
 */
 public class ComputeLoan {
 
+  //loan amount user input
+  double loanAmt;
+
+  //loan period user input
+  int loanPeriod;
+
   //initialize Scanner
   Scanner.scan = new Scanner(System.in);
 
@@ -26,19 +32,22 @@ public class ComputeLoan {
     System.out.println("Enter Loan Amount: ");
 
     //loan amount user input
-    int loanAmt;
-    loanAmt = scan.nextInt();
+    loanAmt = scan.nextDouble();
 
     //ask user for loan period
     System.out.println("Enter Loan Period: ");
 
     //loan period user input
-    int loanPeriod;
     loanPeriod = scan.nextInt();
   }
 
 
-  /*Computing Methods*/
+  /*
+  This method computes loan amounts with given info
+  */
+  public void computeMonthly() {
+    double monthlyPayment = loanAmt * monthlyInterest / (1 - 1 / Math.pow(1 + monthlyInterest, numYears * 12));
+  }
 
 
   /*
