@@ -43,7 +43,8 @@ public class ComputeLoan {
 
 
   /*
-  This method computes loan amounts with given info
+  This method computes loan amounts using user input and
+    interest rates starting 5% to 8% in 1/8 increments
   */
   public void computeMonthly() {
     double monthlyPayment = loanAmt * monthlyInterest / (1 - 1 / Math.pow(1 + monthlyInterest, numYears * 12));
@@ -55,6 +56,7 @@ public class ComputeLoan {
   */
   public static void main(String[] args) {
     userInput();
+    computeMonthly();
   }
 
 }
