@@ -22,7 +22,15 @@ public class ComputeLoan {
     int numYears = input.nextInt();
 
     //table header
-    System.out.println("Interest Rate Monthly Payment Total Payment");
+    System.out.printf("%-1s%20s%20s\n", "Interest Rate", "Monthly Payment","Total Payment");
 
+    //loop to populate table
+    for(i = 5; i <=8; i+=0.125) {
+      double interestRate = i;
+      double monthlyPayment = loanAmt * interestRate / (1 - 1 / Math.pow(1 + interestRate, loanPeriod * 12));
+      double totalPayment = monthlyPayment * loanPeriod * 12;
+
+      System.out.printf("%-1s%20s%20s\n", Double.toString(interestRate, monthlyPayment, totalPayment);
+    }
   }
 }
